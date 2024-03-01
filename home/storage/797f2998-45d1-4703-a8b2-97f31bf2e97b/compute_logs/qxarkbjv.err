@@ -1,0 +1,22 @@
+[32m2024-02-25 19:36:15 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 797f2998-45d1-4703-a8b2-97f31bf2e97b - 522832 - LOGS_CAPTURED - Started capturing logs in process (pid: 522832).
+[32m2024-02-25 19:36:15 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 797f2998-45d1-4703-a8b2-97f31bf2e97b - 522832 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-25 19:36:15 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 797f2998-45d1-4703-a8b2-97f31bf2e97b - 522832 - training_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2024-02-25 19:36:15 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 797f2998-45d1-4703-a8b2-97f31bf2e97b - training_data - Writing file at: /home/antonio/Desktop/Recommender_movie_system/movies_dagster/home/storage/training_data using PickledObjectFilesystemIOManager...
+[32m2024-02-25 19:36:15 -0300[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 797f2998-45d1-4703-a8b2-97f31bf2e97b - 522832 - training_data - STEP_FAILURE - Execution of step "training_data" failed.
+
+dagster._core.errors.DagsterExecutionHandleOutputError: Error occurred while handling output "result" of step "training_data"::
+
+TypeError: cannot pickle 'generator' object
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 461, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 722, in _gen_fn
+    gen_output = output_manager.handle_output(output_context, output.value)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/storage/upath_io_manager.py", line 453, in handle_output
+    self.dump_to_path(context=context, obj=obj, path=path)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/storage/fs_io_manager.py", line 260, in dump_to_path
+    pickle.dump(obj, file, PICKLE_PROTOCOL)
+[0m

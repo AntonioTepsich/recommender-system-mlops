@@ -1,0 +1,16 @@
+[32m2024-02-14 03:00:11 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 924142a0-0b54-4811-9a2a-802c1c4d41d5 - 96498 - LOGS_CAPTURED - Started capturing logs in process (pid: 96498).
+[32m2024-02-14 03:00:11 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 924142a0-0b54-4811-9a2a-802c1c4d41d5 - 96498 - airbyte_sync_68f41 - STEP_START - Started execution of step "airbyte_sync_68f41".
+[32m2024-02-14 03:00:12 -0300[0m - dagster - [34mINFO[0m - all_assets - 924142a0-0b54-4811-9a2a-802c1c4d41d5 - airbyte_sync_68f41 - Job 56 initialized for connection_id=68f41ff3-6b5f-488c-959b-be8ae7f5fd19.
+[32m2024-02-14 03:00:32 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 924142a0-0b54-4811-9a2a-802c1c4d41d5 - 96498 - airbyte_sync_68f41 - ASSET_MATERIALIZATION - Materialized value jaffle_shop movies.
+[32m2024-02-14 03:00:32 -0300[0m - dagster - [34mERROR[0m - [31mall_assets - 924142a0-0b54-4811-9a2a-802c1c4d41d5 - 96498 - airbyte_sync_68f41 - STEP_FAILURE - Execution of step "airbyte_sync_68f41" failed.
+
+dagster._core.errors.DagsterStepOutputNotFoundError: Core compute for op "airbyte_sync_68f41" did not return an output for non-optional output "jaffle_shop_customers"
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_plan.py", line 275, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 476, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 272, in _step_output_error_checked_user_event_sequence
+    raise DagsterStepOutputNotFoundError(
+[0m

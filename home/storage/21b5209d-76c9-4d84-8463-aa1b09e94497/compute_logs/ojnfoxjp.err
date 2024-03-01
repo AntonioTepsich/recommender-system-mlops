@@ -1,0 +1,7 @@
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - 51928 - LOGS_CAPTURED - Started capturing logs in process (pid: 51928).
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - 51928 - movies - STEP_START - Started execution of step "movies".
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - 51928 - movies - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - movies - Writing file at: data/movies using PickledObjectFilesystemIOManager...
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - 51928 - movies - ASSET_MATERIALIZATION - Materialized value movies.
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - 51928 - movies - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2024-02-13 03:33:16 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 21b5209d-76c9-4d84-8463-aa1b09e94497 - 51928 - movies - STEP_SUCCESS - Finished execution of step "movies" in 484ms.

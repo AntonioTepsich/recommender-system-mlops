@@ -1,0 +1,19 @@
+[32m2024-02-25 23:48:13 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9113d8ba-7fee-4010-b12f-ab49778de681 - 144645 - LOGS_CAPTURED - Started capturing logs in process (pid: 144645).
+[32m2024-02-25 23:48:13 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9113d8ba-7fee-4010-b12f-ab49778de681 - 144645 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-25 23:48:13 -0300[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 9113d8ba-7fee-4010-b12f-ab49778de681 - 144645 - training_data - STEP_FAILURE - Execution of step "training_data" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "training_data"::
+
+psycopg2.OperationalError: invalid integer value "(5432" for connection option "port"
+
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 461, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/antonio/Desktop/Recommender_movie_system/movies_dagster/movies_dagster/assets/extract/__init__.py", line 81, in training_data
+    conn = psycopg2.connect(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[0m

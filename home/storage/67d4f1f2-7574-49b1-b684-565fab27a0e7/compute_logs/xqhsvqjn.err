@@ -1,0 +1,16 @@
+[32m2024-02-26 00:01:35 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 67d4f1f2-7574-49b1-b684-565fab27a0e7 - 177909 - LOGS_CAPTURED - Started capturing logs in process (pid: 177909).
+[32m2024-02-26 00:01:35 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 67d4f1f2-7574-49b1-b684-565fab27a0e7 - 177909 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-26 00:01:36 -0300[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 67d4f1f2-7574-49b1-b684-565fab27a0e7 - 177909 - training_data - STEP_FAILURE - Execution of step "training_data" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "training_data"::
+
+TypeError: object of type 'int' has no len()
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 461, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/antonio/Desktop/Recommender_movie_system/movies_dagster/movies_dagster/assets/extract/__init__.py", line 98, in training_data
+    context.log.info(f"Fetched {len(rows)} rows from {schema_name}.{table_name}")
+[0m

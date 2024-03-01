@@ -1,0 +1,14 @@
+dagster
+dagster_airbyte
+dagster_dbt
+dbt-postgres
+psycopg2
+dagster_postgres
+dagster-mlflow==0.21.6
+mlflow==2.8.0
+tensorflow==2.14.0
+
+[dev]
+dagster-webserver
+pytest
+jupyter

@@ -1,0 +1,42 @@
+[32m2024-03-01 16:55:32 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - LOGS_CAPTURED - Started capturing logs in process (pid: 141619).
+[32m2024-03-01 16:55:32 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - STEP_START - Started execution of step "dbt_project_dbt_assets".
+[32m2024-03-01 16:55:32 -0300[0m - dagster - [34mINFO[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - dbt_project_dbt_assets - A dbt subsetted execution is not being performed. Using the default dbt selection arguments `['--select', 'fqn:*']`.
+[32m2024-03-01 16:55:32 -0300[0m - dagster - [34mINFO[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - dbt_project_dbt_assets - Copying `/home/antonio/Desktop/Recommender_movie_system/movies_dagster/db_postgres/target/partial_parse.msgpack` to `/home/antonio/Desktop/Recommender_movie_system/movies_dagster/db_postgres/target/dbt_project_dbt_assets-4a2cc74-5bd183a/partial_parse.msgpack` to take advantage of partial parsing.
+[32m2024-03-01 16:55:32 -0300[0m - dagster - [34mINFO[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - dbt_project_dbt_assets - Running dbt command: `dbt build --select fqn:*`.
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - STEP_OUTPUT - Yielded output "movies" of type "Nothing". (Type check passed).
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - ASSET_MATERIALIZATION - Materialized value movies.
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - HANDLED_OUTPUT - Handled output "movies" using IO manager "io_manager"
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - STEP_OUTPUT - Yielded output "scores" of type "Nothing". (Type check passed).
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - ASSET_MATERIALIZATION - Materialized value scores.
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - HANDLED_OUTPUT - Handled output "scores" using IO manager "io_manager"
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - STEP_OUTPUT - Yielded output "users" of type "Nothing". (Type check passed).
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - ASSET_MATERIALIZATION - Materialized value users.
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mDEBUG[0m - full_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - HANDLED_OUTPUT - Handled output "users" using IO manager "io_manager"
+[32m2024-03-01 16:55:35 -0300[0m - dagster - [34mERROR[0m - [31mfull_process - 4a2cc744-4078-41d0-aee8-a4bb569562e0 - 141619 - dbt_project_dbt_assets - STEP_FAILURE - Execution of step "dbt_project_dbt_assets" failed.
+
+dagster._core.errors.DagsterExecutionInterruptedError
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_plan.py", line 275, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 476, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 159, in _step_output_error_checked_user_event_sequence
+    for user_event in user_event_sequence:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 94, in _process_asset_results_to_events
+    for user_event in user_event_sequence:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/compute.py", line 204, in execute_core_compute
+    for step_output in _yield_compute_results(step_context, inputs, compute_fn):
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/compute.py", line 173, in _yield_compute_results
+    for event in iterate_with_context(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 461, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/antonio/Desktop/Recommender_movie_system/movies_dagster/movies_dagster/assets/extract/__init__.py", line 55, in dbt_project_dbt_assets
+    yield from dbt.cli(["build"], context=context).stream()
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster_dbt/core/resources_v2.py", line 389, in stream
+    for event in self.stream_raw_events():
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster_dbt/core/resources_v2.py", line 404, in stream_raw_events
+    for raw_line in self.process.stdout or []:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_utils/interrupts.py", line 82, in _new_signal_handler
+    raise error_cls()
+[0m

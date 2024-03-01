@@ -1,0 +1,18 @@
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - 166114 - LOGS_CAPTURED - Started capturing logs in process (pid: 166114).
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - 166114 - preprocessed_data - STEP_START - Started execution of step "preprocessed_data".
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - preprocessed_data - Loading file from: /home/antonio/Desktop/Recommender_movie_system/movies_dagster/home/storage/training_data using PickledObjectFilesystemIOManager...
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - 166114 - preprocessed_data - ASSET_OBSERVATION - ASSET_OBSERVATION for step preprocessed_data
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - 166114 - preprocessed_data - LOADED_INPUT - Loaded input "training_data" using input manager "io_manager"
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - 166114 - preprocessed_data - STEP_INPUT - Got input "training_data" of type "DataFrame". Warning! Type check failed.
+[32m2024-02-25 23:56:50 -0300[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 9f1bd267-ea34-4ae1-a0bb-88f02ce3f24d - 166114 - preprocessed_data - STEP_FAILURE - Execution of step "preprocessed_data" failed.
+
+dagster._core.errors.DagsterTypeCheckDidNotPass: Type check failed for step input "training_data" - expected type "DataFrame". Description: Value of type <class 'list'> failed type check for Dagster type DataFrame, expected value to be of Python type pandas.core.frame.DataFrame.
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_plan.py", line 275, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 450, in core_dagster_event_sequence_for_step
+    for evt in check.generator(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 350, in _type_checked_event_sequence_for_input
+    raise DagsterTypeCheckDidNotPass(
+[0m

@@ -1,0 +1,27 @@
+[32m2024-02-25 22:49:00 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 9e81cbd3-12fd-4116-9a23-34c99e259df7 - 25043 - LOGS_CAPTURED - Started capturing logs in process (pid: 25043).
+[32m2024-02-25 22:49:00 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 9e81cbd3-12fd-4116-9a23-34c99e259df7 - 25043 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-25 22:49:00 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 9e81cbd3-12fd-4116-9a23-34c99e259df7 - training_data - Loading file from: /home/antonio/Desktop/Recommender_movie_system/movies_dagster/home/storage/scores_movies_users using PickledObjectFilesystemIOManager...
+[32m2024-02-25 22:49:00 -0300[0m - dagster - [34mERROR[0m - [31mall_assets - 9e81cbd3-12fd-4116-9a23-34c99e259df7 - 25043 - training_data - STEP_FAILURE - Execution of step "training_data" failed.
+
+dagster._core.errors.DagsterExecutionLoadInputError: Error occurred while loading input "scores_movies_users" of step "training_data"::
+
+FileNotFoundError: [Errno 2] No such file or directory: '/home/antonio/Desktop/Recommender_movie_system/movies_dagster/home/storage/scores_movies_users'
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/inputs.py", line 831, in _load_input_with_input_manager
+    value = input_manager.load_input(context)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/storage/upath_io_manager.py", line 402, in load_input
+    return self._load_single_input(path, context)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/storage/upath_io_manager.py", line 256, in _load_single_input
+    raise e
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/storage/upath_io_manager.py", line 239, in _load_single_input
+    obj = self.load_from_path(context=context, path=path)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/storage/fs_io_manager.py", line 283, in load_from_path
+    with path.open("rb") as file:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/pathlib.py", line 1252, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/pathlib.py", line 1120, in _opener
+    return self._accessor.open(self, flags, mode)
+[0m

@@ -1,0 +1,7 @@
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - 274838 - LOGS_CAPTURED - Started capturing logs in process (pid: 274838).
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - 274838 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - 274838 - training_data - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - training_data - Writing file at: /home/antonio/Desktop/Recommender_movie_system/movies_dagster/home/storage/training_data using PickledObjectFilesystemIOManager...
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - 274838 - training_data - ASSET_MATERIALIZATION - Materialized value training_data.
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - 274838 - training_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2024-02-25 17:21:53 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 39f4ddc2-2498-4a11-8b7d-501661bd5aae - 274838 - training_data - STEP_SUCCESS - Finished execution of step "training_data" in 57ms.

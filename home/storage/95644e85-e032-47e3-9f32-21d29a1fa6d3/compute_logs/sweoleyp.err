@@ -1,0 +1,15 @@
+[32m2024-02-25 23:52:18 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 95644e85-e032-47e3-9f32-21d29a1fa6d3 - 154753 - LOGS_CAPTURED - Started capturing logs in process (pid: 154753).
+[32m2024-02-25 23:52:18 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 95644e85-e032-47e3-9f32-21d29a1fa6d3 - 154753 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-25 23:52:18 -0300[0m - dagster - [34mINFO[0m - __ASSET_JOB - 95644e85-e032-47e3-9f32-21d29a1fa6d3 - training_data - Fetched 25000 rows from target.scores_movies_users
+[32m2024-02-25 23:52:18 -0300[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 95644e85-e032-47e3-9f32-21d29a1fa6d3 - 154753 - training_data - STEP_FAILURE - Execution of step "training_data" failed.
+
+dagster._core.errors.DagsterInvariantViolationError: Core compute for op "training_data" returned an output "data" that does not exist. The available outputs are ['result']
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_plan.py", line 275, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 476, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 167, in _step_output_error_checked_user_event_sequence
+    raise DagsterInvariantViolationError(
+[0m

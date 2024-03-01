@@ -1,0 +1,7 @@
+[32m2024-02-13 04:32:17 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - 87766 - LOGS_CAPTURED - Started capturing logs in process (pid: 87766).
+[32m2024-02-13 04:32:17 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - 87766 - airbyte_sync_68f41 - STEP_START - Started execution of step "airbyte_sync_68f41".
+[32m2024-02-13 04:32:18 -0300[0m - dagster - [34mINFO[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - airbyte_sync_68f41 - Job 54 initialized for connection_id=68f41ff3-6b5f-488c-959b-be8ae7f5fd19.
+[32m2024-02-13 04:32:38 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - 87766 - airbyte_sync_68f41 - STEP_OUTPUT - Yielded output "movies" of type "Nothing". (Type check passed).
+[32m2024-02-13 04:32:38 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - 87766 - airbyte_sync_68f41 - ASSET_MATERIALIZATION - Materialized value movies.csv → mlops postgres movies.
+[32m2024-02-13 04:32:38 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - 87766 - airbyte_sync_68f41 - HANDLED_OUTPUT - Handled output "movies" using IO manager "io_manager"
+[32m2024-02-13 04:32:38 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - cdea730d-1cbf-400e-b685-dcfe61c586dc - 87766 - airbyte_sync_68f41 - STEP_SUCCESS - Finished execution of step "airbyte_sync_68f41" in 21.13s.

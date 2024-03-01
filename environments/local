@@ -1,0 +1,9 @@
+DAGSTER_HOME=/home/antonio/Desktop/Recommender_movie_system/movies_dagster/home
+MLFLOW_TRACKING_URI=http://0.0.0.0:8002
+
+postgres_data_folder=/home/antonio/Desktop/Recommender_movie_system/mlops-ecosystem/dbs/data/postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=mysecretpassword
+POSTGRES_HOST=localhost:5432
+MLFLOW_POSTGRES_DB=mlflow_db_movie
+MLFLOW_ARTIFACTS_PATH=/home/antonio/Desktop/Recommender_movie_system/mlops-ecosystem/mlflow_data

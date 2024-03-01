@@ -1,0 +1,16 @@
+[32m2024-02-15 22:38:08 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e7ce5d66-6af0-4538-98ae-53f4d37f755f - 20910 - LOGS_CAPTURED - Started capturing logs in process (pid: 20910).
+[32m2024-02-15 22:38:08 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e7ce5d66-6af0-4538-98ae-53f4d37f755f - 20910 - airbyte_sync_efab5 - STEP_START - Started execution of step "airbyte_sync_efab5".
+[32m2024-02-15 22:38:10 -0300[0m - dagster - [34mINFO[0m - __ASSET_JOB - e7ce5d66-6af0-4538-98ae-53f4d37f755f - airbyte_sync_efab5 - Job 58 initialized for connection_id=efab560d-023a-4a9c-9874-ba83c1cd7a83.
+[32m2024-02-15 22:38:51 -0300[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e7ce5d66-6af0-4538-98ae-53f4d37f755f - 20910 - airbyte_sync_efab5 - ASSET_MATERIALIZATION - Materialized value extract scores.
+[32m2024-02-15 22:38:51 -0300[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - e7ce5d66-6af0-4538-98ae-53f4d37f755f - 20910 - airbyte_sync_efab5 - STEP_FAILURE - Execution of step "airbyte_sync_efab5" failed.
+
+dagster._core.errors.DagsterStepOutputNotFoundError: Core compute for op "airbyte_sync_efab5" did not return an output for non-optional output "extract_scores"
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_plan.py", line 275, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 476, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/execute_step.py", line 272, in _step_output_error_checked_user_event_sequence
+    raise DagsterStepOutputNotFoundError(
+[0m

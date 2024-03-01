@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+movies_dagster/__init__.py
+movies_dagster/db_io_manager.py
+movies_dagster.egg-info/PKG-INFO
+movies_dagster.egg-info/SOURCES.txt
+movies_dagster.egg-info/dependency_links.txt
+movies_dagster.egg-info/requires.txt
+movies_dagster.egg-info/top_level.txt
+movies_dagster/assets/__init__.py
+movies_dagster/assets/extract/__init__.py
+movies_dagster/assets/recommender/__init__.py
+movies_dagster/assets/recommender/model_helper.py
+movies_dagster/assets/recommender/train_model.py

@@ -1,0 +1,20 @@
+[32m2024-02-25 17:56:35 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 505d308e-6c68-4c93-bf95-aafab2315a34 - 357119 - LOGS_CAPTURED - Started capturing logs in process (pid: 357119).
+[32m2024-02-25 17:56:35 -0300[0m - dagster - [34mDEBUG[0m - all_assets - 505d308e-6c68-4c93-bf95-aafab2315a34 - 357119 - training_data - STEP_START - Started execution of step "training_data".
+[32m2024-02-25 17:56:35 -0300[0m - dagster - [34mERROR[0m - [31mall_assets - 505d308e-6c68-4c93-bf95-aafab2315a34 - 357119 - training_data - STEP_FAILURE - Execution of step "training_data" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "training_data"::
+
+TypeError: 'DagsterLogManager' object is not callable
+
+Stack Trace:
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 461, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 131, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/home/antonio/anaconda3/envs/dagster-mlops/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 125, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/home/antonio/Desktop/Recommender_movie_system/movies_dagster/movies_dagster/assets/extract/__init__.py", line 53, in training_data
+    context.log("Extracting Data Report")
+[0m
